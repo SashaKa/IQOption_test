@@ -1,0 +1,31 @@
+{
+  "name": "IQOption_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaKa/IQOption_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SashaKa/IQOption_test/issues"
+  },
+  "homepage": "https://github.com/SashaKa/IQOption_test#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-less": "^3.3.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "gulp-plumber": "^1.1.0"
+  }
+}
