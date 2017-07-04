@@ -4,9 +4,10 @@ const plugins = require('gulp-load-plugins')();
 
 gulp.task('default', () => {
   gulp.watch('src/less/*.less', ['build-css-from-less']);
+  gulp.watch('build/*.html', ['validate-html']);
 });
 
-gulp.task('build-css-from-less', function() {
+gulp.task('build-css-from-less', () => {
   return gulp
     .src('src/less/*.less')
     .pipe(plugins.plumber())
@@ -29,3 +30,9 @@ gulp.task('build-css-from-less', function() {
     .pipe(gulp.dest('build/css'))
     .on('error', gutil.log);
 });
+
+gulp.task('validate-html', () => {
+  return gulp.src("build/*.html")
+    .pipe(plugins.htmlhint())
+    .pipe(plugins.htmlhint.reporter())
+})
