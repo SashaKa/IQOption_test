@@ -41,8 +41,10 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 700px;
     margin: 0 auto;
+}
+.header-content {
+    height: 700px;
 }
 
 .header__title,
@@ -50,13 +52,15 @@ body {
     font-size: 2.6429rem;
     font-weight: 300;
     text-transform: uppercase;
-    margin: 0;
 	text-align: center;
 	color: #ffffff;
 
      .screen(768px, 2220px, {
         font-size: 7.6429rem;
     });
+}
+.header__title {
+    margin: 0;
 }
 
 .header__description {
@@ -71,14 +75,77 @@ body {
     position: absolute;
     bottom: 0;
 }
-
-.main-table {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 640px;
+.main-content__table {
+    
+    margin-bottom: 5%;
 }
-.table-title {
-    display: block;
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    justify-content: space-between;
+    width: 70%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 2px solid #23316c;
+    border-collapse: collapse;
+    padding-top: 5px;
+
+    &:last-of-type{
+        border-bottom: none;
+    }
+}
+.header-row {
     background-color: #23316c;
-        padding: 0.8rem 12rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 4rem;
+}
+.table-row__left-column,
+.table-row__right-column {
+    flex-grow: 1;         
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 138px;
+    padding: 5px 0;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+.table-row__right-column {
+    padding-left: 10rem;
+    
+}
+
+.main-inner__next-title {
+    margin-bottom: 2rem;
+}
+.main-inner__next-description {
+    color: #4b5faf;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 300;
+    max-width: 90%;
+    text-align: center;
+}
+
+.main-section__text {
+    font-size: 26.8px;
+    line-height: 1.5;
+    font-weight: 300;
+    
+    &:first-child {
+        height: 300px;
+    }
+}
+.main-section__img {
+    max-width: 45%;
+    float: left;
+    margin-top: -3.5rem;
 }
