@@ -26,7 +26,6 @@ gulp.task('build-css-from-less', () => {
         cascade: false
       })
     )
-    .pipe(plugins.cssmin())
     .pipe(gulp.dest('build/css'))
     .on('error', gutil.log);
 });
